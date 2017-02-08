@@ -60,6 +60,15 @@ AWS currently does not offer a service for VPC peering between regions.  This me
 
 Security Group rules will sometimes include references to other Security Groups.  But the oder Groups are Created is indeterminate ( not alphabetical or pillar order ).  So sometimes a Security Group creation will fail because it is being created before the group it references.  Re-running the formula to create these failed security groups.
 
+VPC Selection
+=================
+By default the states for all VPCs defined in the aws pillar will be run.
+To limit states to a single VPC use the command line pillar
+
+.. code-block::
+
+  salt myserver state.apply pillar='{"vpc":"myvpc"}'
+
 
 Configuration
 =================
