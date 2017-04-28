@@ -1,5 +1,5 @@
 include:
-  - .vpc
+  - .VPC
   - .secgroup
   - .ec2
 
